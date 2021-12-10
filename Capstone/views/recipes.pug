@@ -1,0 +1,250 @@
+doctype html
+// Basic
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  // Mobile Metas
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Site Metas
+  title Recipes 
+  meta(name='keywords' content='')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  // Site Icons
+  link(rel='shortcut icon' href='images/favicon.ico' type='image/x-icon')
+  link(rel='apple-touch-icon' href='images/apple-touch-icon.png')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='css/bootstrap.min.css')
+  // Site CSS
+  link(rel='stylesheet' href='css/style.css')
+  // Responsive CSS
+  link(rel='stylesheet' href='css/responsive.css')
+  // Custom CSS
+  link(rel='stylesheet' href='css/custom.css')
+// Start Main Top
+.main-top
+  .container-fluid
+    .row
+      .col-lg-6.col-md-6.col-sm-12.col-xs-12
+        .right-phone-box
+          p
+            | Call US :- 
+            a(href='#') 801-555-4887
+        .our-link
+          ul
+            li
+              a(href='contact')
+                i.fas.fa-headset
+                |  Contact Us
+            
+// End Main Top
+// Start Main Top
+header.main-header
+  // Start Navigation
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-default.bootsnav
+    .container
+      // Start Header Navigation
+      .navbar-header
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-menu' aria-controls='navbars-rs-food' aria-expanded='false' aria-label='Toggle navigation')
+          i.fa.fa-bars
+      // End Header Navigation
+      // Collect the nav links, forms, and other content for toggling
+      #navbar-menu.collapse.navbar-collapse
+        ul.nav.navbar-nav.ml-auto(data-in='fadeInDown' data-out='fadeOutUp')
+          li.nav-item.active
+            a.nav-link(href='/') Home
+          li.nav-item
+            a.nav-link(href='about') About Us
+          li.nav-item
+            a.nav-link(href='recipes') Recipes
+  // End Navigation
+// End Main Top
+// Start Top Search
+.top-search
+  .container
+    .input-group
+      span.input-group-addon
+        i.fa.fa-search
+      input.form-control(type='text' placeholder='Search')
+      span.input-group-addon.close-search
+        i.fa.fa-times
+// End Top Search
+// Start All Title Box
+.all-title-box
+  .container
+    .row
+      .col-lg-12
+        h2 Recipes
+        style.
+          
+          
+          .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+          }
+         
+          .topnav .search-container {
+          float: right;
+          }
+          .topnav input[type=text] {
+          padding: 6px;
+          margin-top: 8px;
+          font-size: 17px;
+          border: none;
+          }
+          .topnav .search-container button {
+          float: right;
+          padding: 6px 10px;
+          margin-top: 8px;
+          margin-right: 16px;
+          background: #ddd;
+          font-size: 17px;
+          border: none;
+          cursor: pointer;
+          }
+          .topnav .search-container button:hover {
+          background: #ccc;
+          }
+          @media screen and (max-width: 600px) {
+          .topnav .search-container {
+          float: none;
+          }
+          .topnav a, .topnav input[type=text], .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+          }
+          .topnav input[type=text] {
+          border: 1px solid #ccc;
+          }
+          }
+        .search-container
+          form(action='/recipeSearch'  method='GET')
+            input(type='text' placeholder='Search..' name='name')
+            button(type='submit')
+              i.fa.fa-search
+        
+// End All Title Box
+// Start Recipe Page
+.about-box-main
+  .container
+    .row
+      .col-lg-6
+        .banner-frame
+      .col-lg-6
+        h2.noo-sh-title-top
+          span Recipes
+    table(class='recipes')
+        each item in recipe 
+            tr 
+                th Name 
+            tr 
+                td=item.name 
+            tr 
+                th Quanity 
+                th Ingredients 
+                th steps
+            tr
+                - var n = 0;
+                each i in item.ingredients
+                  if item.steps[n] !== "undefined"
+                    tr   
+                        td=i.quantity 
+                        td=i.name
+                        td="Step " + n + ": " + item.steps[n]
+                    - n = n + 1
+// End About Page
+// Start Instagram Feed
+.instagram-box
+  .main-instagram.owl-carousel.owl-theme
+    .item
+      .ins-inner-box
+        img(src='images/food1.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food2.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food3.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food4.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food5.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food6.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food7.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food8.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food9.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food10.jpg' alt='')
+// End Instagram Feed
+// Start Footer
+footer
+  .footer-main
+    .container
+      .row
+      hr
+      .row
+        .col-lg-4.col-md-12.col-sm-12
+          .footer-link
+            h4 Information
+            ul
+              li
+                a(href='about') About Us
+              li
+                a(href='#') Customer Service
+              li
+                a(href='#') Terms &amp; Conditions
+              li
+                a(href='#') Privacy Policy
+        .col-lg-4.col-md-12.col-sm-12
+          .footer-link-contact
+            h4 Contact Us
+            ul
+              li
+                p
+                  i.fas.fa-phone-square
+                  | Phone: 
+                  a(href='tel:+1-888705770') 801-555-4887
+              li
+                p
+                  i.fas.fa-envelope
+                  | Email: 
+                  a(href='mailto:contactinfo@gmail.com') manelson@student.neumont.edu
+// End Footer
+// Start copyright
+.footer-copyright
+  p.footer-company
+    | All Rights Reserved. &copy; 2021
+// End copyright
+a#back-to-top(href='#' title='Back to top' style='display: none;') &uarr;
+// ALL JS FILES
+script(src='js/jquery-3.2.1.min.js')
+script(src='js/popper.min.js')
+script(src='js/bootstrap.min.js')
+// ALL PLUGINS
+script(scr='js/script.js')
+script(src='js/jquery.superslides.min.js')
+script(src='js/bootstrap-select.js')
+script(src='js/inewsticker.js')
+script(src='js/bootsnav.js.')
+script(src='js/images-loded.min.js')
+script(src='js/isotope.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/baguetteBox.min.js')
+script(src='js/form-validator.min.js')
+script(src='js/contact-form-script.js')
+script(src='js/custom.js')

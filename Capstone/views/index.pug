@@ -1,0 +1,196 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  // Mobile Metas
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // Site Metas
+  title Home
+  meta(name='keywords' content='')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  // Site Icons
+  link(rel='shortcut icon' href='images/favicon.ico' type='image/x-icon')
+  link(rel='apple-touch-icon' href='images/apple-touch-icon.png')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='css/bootstrap.min.css')
+  // Site CSS
+  link(rel='stylesheet' href='css/style.css')
+  // Responsive CSS
+  link(rel='stylesheet' href='css/responsive.css')
+  // Custom CSS
+  link(rel='stylesheet' href='css/custom.css')
+// Start Main Top
+.main-top
+  .container-fluid
+    .row
+      .col-lg-6.col-md-6.col-sm-12.col-xs-12
+        .right-phone-box
+          p
+            | Call US : 
+            a(href='#')  801-555-4887
+        .our-link
+          ul
+            // <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
+            li
+              a(href='contact')
+                i.fas.fa-headset
+                |  Contact Us
+            // <li><a href="#"><i class="Sign In"></i> Sign In</a></li>
+header.main-header
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-default.bootsnav
+    .container
+      // Start Header Navigation
+      .navbar-header
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-menu' aria-controls='navbars-rs-food' aria-expanded='false' aria-label='Toggle navigation')
+          i.fa.fa-bars
+        a.navbar-brand(href='/')
+          img.logo(src='' alt='')
+      // End Header Navigation
+      // Collect the nav links, forms, and other content for toggling
+      #navbar-menu.collapse.navbar-collapse
+        ul.nav.navbar-nav.ml-auto(data-in='fadeInDown' data-out='fadeOutUp')
+          li.nav-item.active
+            a.nav-link(href='/') Home
+          li.nav-item
+            a.nav-link(href='about') About Us
+          li.nav-item
+            a.nav-link(href='recipes') Recipes
+// Start Slider
+#slides-shop.cover-slides
+  ul.slides-container
+    li.text-center
+      img(src='images/banner1.jpg' alt='')
+      .container
+        .row
+          .col-md-12
+            h1.m-b-20
+              strong Welcome to Simply Food!
+    li.text-center
+      img(src='images/banner2.jpg' alt='')
+      .container
+        .row
+          .col-md-12
+            h1.m-b-20
+              strong Welcome to Simply Food!
+    li.text-center
+      img(src='images/banner3.jpg' alt='')
+      .container
+        .row
+          .col-md-12
+            h1.m-b-20
+              strong Welcome to Simply Food!
+  .slides-navigation
+    a.next(href='#')
+      i.fa.fa-angle-right(aria-hidden='true')
+    a.prev(href='#')
+      i.fa.fa-angle-left(aria-hidden='true')
+// End Slider
+// Start Categories
+.categories-shop
+  .container
+    .row
+      .col-lg-4.col-md-4.col-sm-12.col-xs-12
+        .shop-cat-box
+          img.img-fluid(src='images/fettucine.jpg' alt='')
+          a.btn.hvr-hover(href='#') Fettucine Alfredo
+      .col-lg-4.col-md-4.col-sm-12.col-xs-12
+        .shop-cat-box
+          img.img-fluid(src='images/chickenrollatini.jpg' alt='')
+          a.btn.hvr-hover(href='#') Chicken Rollantini
+      .col-lg-4.col-md-4.col-sm-12.col-xs-12
+        .shop-cat-box
+          img.img-fluid(src='images/pumpkinpie.jpg' alt='')
+          a.btn.hvr-hover(href='#') Pumpkin Pie
+// End Categories
+// Start Instagram Feed
+.instagram-box
+  .main-instagram.owl-carousel.owl-theme
+    .item
+      .ins-inner-box
+        img(src='images/food1.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food2.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food3.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food4.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food5.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food6.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food7.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food8.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food9.jpg' alt='')
+    .item
+      .ins-inner-box
+        img(src='images/food10.jpg' alt='')
+// End Instagram Feed
+// Start Footer
+footer
+  .footer-main
+    .container
+      .row
+      hr
+      .row
+        .col-lg-4.col-md-12.col-sm-12
+          .footer-link
+            h4 Information
+            ul
+              li
+                a(href='about') About Us
+              li
+                a(href='#') Customer Service
+              li
+                a(href='#') Terms &amp; Conditions
+              li
+                a(href='#') Privacy Policy
+        .col-lg-4.col-md-12.col-sm-12
+          .footer-link-contact
+            h4 Contact Us
+            ul
+              li
+                p
+                  i.fas.fa-phone-square
+                  | Phone: 
+                  a(href='tel:+1-888705770') 801-555-4887
+              li
+                p
+                  i.fas.fa-envelope
+                  | Email: 
+                  a(href='mailto:contactinfo@gmail.com') manelson@student.neumont.edu
+// End Footer
+// Start copyright
+.footer-copyright
+  p.footer-company
+    | All Rights Reserved. &copy; 2021 
+    a(href='#')
+// End copyright
+a#back-to-top(href='#' title='Back to top' style='display: none;') &uarr;
+// ALL JS FILES
+script(src='js/jquery-3.2.1.min.js')
+script(src='js/popper.min.js')
+script(src='js/bootstrap.min.js')
+// ALL PLUGINS
+script(src='js/jquery.superslides.min.js')
+script(src='js/bootstrap-select.js')
+script(src='js/inewsticker.js')
+script(src='js/bootsnav.js.')
+script(src='js/images-loded.min.js')
+script(src='js/isotope.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/baguetteBox.min.js')
+script(src='js/form-validator.min.js')
+script(src='js/contact-form-script.js')
+script(src='js/custom.js')
